@@ -30,11 +30,4 @@ export class UsersService {
     const selectedUser = await this.verifyUser(user)
     return selectedUser;
   }
-
-  async login(user: User): Promise<object> {
-    const { username, password } = user
-    const verificar = await this.userModel.findOne({ username })
-    if(!verificar || verificar.password !== password) throw new UnauthorizedException('Usuario ou senha invalidos')
-    return { message: 'Login efetuado com sucesso' }
-  }
 }

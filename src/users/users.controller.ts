@@ -13,12 +13,7 @@ export class UsersController {
     return await this.usersService.create(user)
   }
 
-  @Post('/login')
-  async login(@Body() user: User): Promise<object> {
-    return await this.usersService.login(user)
-  }
-
-  @UseGuards(JwtAuthGuard)
+  // @UseGuards(JwtAuthGuard)
   @Get('/:user')
   async test(@Param() params, @Request() req): Promise<User> {
     console.log(req.user)

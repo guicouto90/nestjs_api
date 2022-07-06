@@ -19,7 +19,7 @@ export class BooksService {
 
   async bookPermission(id: string, username: string) {
     const book = await this.verifyBookById(id)
-    if(book.username !== username) throw new UnauthorizedException("Usuario nao tem permissao nesse livro")
+    if(book.username !== username) throw new UnauthorizedException("Usuario nao tem permissao de acesso para esse livro")
 
     return book
   }
