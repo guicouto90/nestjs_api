@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, HttpCode, Injectable, Param, Post, Put, Request, UseGuards } from "@nestjs/common";
 import { Book } from "./interfaces/books.interface";
 import { BooksService } from "./book.service";
-import { JwtAuthGuard } from "src/auth/guards/jwt-auth.guard";
+import { JwtAuthGuard } from "../auth/guards/jwt-auth.guard";
 import { CreateBookDto } from "./dto/create-books.dto";
 
 @Controller('books')//URL

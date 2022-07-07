@@ -7,6 +7,6 @@ export class CreateBookDto {
 
   @IsNotEmpty()
   @IsNumber()
-  price: string;
+  price: number;
 
 }
