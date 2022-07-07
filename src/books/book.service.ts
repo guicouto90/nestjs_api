@@ -49,7 +49,7 @@ export class BooksService {
     const { name, price } = book
     await this.bookPermission(id, username)
     await this.booksModel.findByIdAndUpdate(id, { name, price })
-    return { message: `book ${ book.name } atualizado`}
+    return { message: `Livro ${ book.name } atualizado`}
   }
 
   async destroy(id: string, username: string) {
